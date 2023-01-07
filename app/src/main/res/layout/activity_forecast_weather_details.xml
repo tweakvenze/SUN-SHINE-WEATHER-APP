@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ForecastWeatherDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#0388fc">
+
+        <TextView
+            android:id="@+id/forecastActivityDateAndTimeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"
+            android:hint="Sunday, March 5"
+            android:textAlignment="center"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <ImageView
+            android:id="@+id/forecastActivityImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="WeatherDetails"
+            android:src="@drawable/ic_baseline_cloud_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/forecastActivityDateAndTimeTextView"></ImageView>
+
+
+        <TextView
+            android:id="@+id/forecastActivityWeatherDescriptionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Light rain"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/forecastActivityImageView"></TextView>
+
+        <TextView
+            android:id="@+id/forecastActivityMaximumTempretureTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24"
+            android:textColor="@color/white"
+            android:textSize="65sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/guideline"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/forecastActivityDateAndTimeTextView"></TextView>
+
+        <TextView
+            android:id="@+id/forecastActivityMinimumTempretureTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13"
+            android:textSize="55sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/guideline"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/forecastActivityMaximumTempretureTextView"></TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Humidity"
+                android:textSize="24sp"
+                android:textColor="@color/black"></TextView>
+
+            <TextView
+                android:id="@+id/forecastHumidityTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:hint="85%"
+                android:textSize="24sp"
+                android:textColor="@color/black"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Preesure"
+                android:textSize="24sp"
+                android:textColor="@color/black"></TextView>
+
+            <TextView
+                android:id="@+id/forecastPressureTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:hint="85%"
+                android:textSize="24sp"
+                android:textColor="@color/black"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Wind Speed"
+                android:textSize="24sp"
+                android:textColor="@color/black"></TextView>
+
+            <TextView
+                android:id="@+id/forecastWindTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:hint="85%"
+                android:textSize="24sp"
+                android:textColor="@color/black"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

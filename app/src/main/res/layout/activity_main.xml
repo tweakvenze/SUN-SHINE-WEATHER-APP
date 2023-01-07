@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:background="#0388fc">
+
+        <TextView
+            android:id="@+id/cityNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_horizontal"
+            android:text="Jabalpur"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="26sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+
+        <TextView
+            android:textColor="@color/white"
+            android:id="@+id/textview"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_horizontal"
+            android:text="Today"
+            android:textAlignment="center"
+            android:textSize="26sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cityNameTextView" ></TextView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <ImageView
+            android:id="@+id/todayWeatherImageView"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline_cloud_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/textview"></ImageView>
+
+
+        <TextView
+            android:textColor="@color/white"
+            android:id="@+id/todayWeatherDescriptionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Light rain"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/TodayWeatherImageView"></TextView>
+
+        <TextView
+            android:id="@+id/todayMaxTempreture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24"
+            android:textColor="@color/white"
+            android:textSize="65sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/guideline"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <TextView
+            android:id="@+id/todayMinTempreture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13"
+            android:textSize="55sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/guideline"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/todayMaxTempreture"></TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            ></androidx.recyclerview.widget.RecyclerView>
+
+        <ProgressBar
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible"></ProgressBar>
+    </FrameLayout>
+
+</LinearLayout>
